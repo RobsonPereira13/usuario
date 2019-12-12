@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar mode='ios' class="content">
+    <ion-title> Meus Favoritos </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let favorite of favorites">
+      <ion-item lines="none" class="lista" button [routerLink]="['/details', favorite.guiaId]">
+        <ion-avatar slot="start">
+          <img [src]="favorite.guiaFoto">
+        </ion-avatar>
+        <ion-label>
+          {{ favorite.guiaName }}
+        </ion-label>
+      </ion-item>
+      <ion-button color="danger" (click)="deletarFavorito(favorite.id)">
+          <ion-icon slot="top" name="trash"></ion-icon> 
+        Excluir</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

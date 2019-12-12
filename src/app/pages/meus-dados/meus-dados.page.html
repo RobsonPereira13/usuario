@@ -1,0 +1,128 @@
+<!-- <ion-header>
+  <ion-toolbar class="topo" color="custom-color">
+    <ion-title> Meus Dados </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="card-form">
+
+    <ion-list>
+
+        <ion-avatar slot="start">
+          <img [src]="user.foto">
+        </ion-avatar>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="text" [(ngModel)]="user.email" disabled="true"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Nome</ion-label>
+        <ion-input type="text" [(ngModel)]="user.nome" disabled="true"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Telefone</ion-label>
+        <ion-input type="string" [(ngModel)]="user.telefone" disabled="true"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-row>
+      <ion-col size="6">
+        <ion-button class="btn" expand="block" [routerLink]="['/editar-perfil']">
+          Editar Perfil
+        </ion-button>
+      </ion-col>
+       
+      <ion-col size="6">
+        <ion-button class="btn" expand="block" [routerLink]="['/change-password']">
+          Alterar Senha
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <div class="footer">
+      <p id="p1">Guia+ 2019. Todos os direitos reservados.</p>
+      <p id="p2">Versão 1.0.0.</p>
+    </div>
+      
+  </ion-card>
+
+</ion-content> -->
+
+
+<ion-header>
+  <ion-toolbar mode='ios' class="content">
+    <ion-buttons slot="start">
+      <ion-back-button style="color: #fff" defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-row>
+        <ion-col class="title">
+          Meus Dados<br>
+        </ion-col>
+      </ion-row>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="title">
+        <ion-avatar>
+          <img [src]="user.foto">
+        </ion-avatar>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="title-desc">
+        <ion-label>
+          <h2>{{user.nome}}</h2>
+        </ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">
+            <ion-icon class='icon' name="person" slot="start"></ion-icon>
+            <b> Nome</b>
+          </ion-label>
+          <ion-input type="text" [(ngModel)]="user.nome" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">
+            <ion-icon class='icon' name="mail" slot="start"></ion-icon>
+            <b> E-mail</b>
+          </ion-label>
+          <ion-input type="text" [(ngModel)]="user.email" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">
+            <ion-icon class='icon' name="call" slot="start"></ion-icon>
+            <b> Telefone</b>
+          </ion-label>
+          <ion-input type="phone" [(ngModel)]="user.telefone" disabled="true"></ion-input>
+        </ion-item>
+        <ion-row>
+          <ion-col>
+            <ion-button style="margin-bottom: 0%;" size='large' class="btn-init" expand='block' [routerLink]="['/editar-perfil']">
+              Editar Perfil
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
